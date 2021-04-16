@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate( -50%, -50%) ;
+    border: 1px solid slategrey;
+    padding: 15px 15px 15px 15px;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.btn,
+.btn:link
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.btn-white{
+    color: #fff;
+    background-color: #3498db;
+}
+.btn:hover{
+    transform: translateY( -3px );
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+btn:active{
+    outline: none;
+    transform: translateY( -1px );
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+
+.wrapper a{
+    margin-left: 10px;
+
+}
