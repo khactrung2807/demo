@@ -1,0 +1,37 @@
+body {
+    font-size: 15px;
+    margin-left: 250px;
+    margin-right: 250px;
+
+  
+    
+}
+header {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1500px;
+}
+.btn {
+    float:right;
+   
+}
+#btn1 {
+    margin-left: 20px;
+}
+#btn2 {
+    background-color: #C62828;
+}
+#Fform > h3 {
+    text-align: center;
+}
+.frm{
+    padding: 20dp;
+}
+#Fform {
+  padding: 30dp;
+margin-left: 150px;
+  vertical-align: middle;
+  border: 2px solid gray;
+  padding-bottom: 20px;
+}

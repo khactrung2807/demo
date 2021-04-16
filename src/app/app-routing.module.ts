@@ -1,14 +1,21 @@
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { AppComponent } from './app.component';
 
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {ListComponent} from './list/list.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+//import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
- 
-  {path: 'list', component: ListComponent}
+  {path:'home', component: HomeComponent},
+  {path: 'list', component: ListComponent},
+  {path:'add', component: CreateStudentComponent},
+  {path:'update', component: UpdateStudentComponent},
+  
+  
 ];
 
 @NgModule({
@@ -16,4 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponentsD = [ ListComponent]
+export const routingComponentsD = [ ListComponent, CreateStudentComponent, UpdateStudentComponent, HomeComponent]

@@ -1,0 +1,77 @@
+<body>
+        <header>
+                <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6" id="Fform">
+                        <h3>Create Student</h3>
+                        <!-- <form id=frm novalidate (submit)="onSubmit()" #form ="ngForm"> -->
+                        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" #form="ngForm" class="frm">
+                                <div class="form-group">
+                                        <label class="label-control">StudentID </label>
+                                        <input type="text" name class="form-control" id="studentId"
+                                                formControlName="studentId" placeholder="Mã studentid..." ngModel
+                                                name="studentId">
+                                </div>
+                                <div class="form-group">
+                                        <label class="label-control">Class </label>
+                                        <input type="text" name class="form-control" formControlName="universityClass"
+                                                placeholder="Lớp học..." ngModel name="universityClass">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">FirstName </label>
+                                        <input type="text" name class="form-control" formControlName="firstName"
+                                                placeholder="Tên..." ngModel name="firstName">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">LastName </label>
+                                        <input type="text" name class="form-control" id="Lname"
+                                                formControlName="lastName" placeholder="Họ..." ngModel name="lastName">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Birthday </label>
+                                        <input type="date" name class="form-control" formControlName="birthDay" ngModel
+                                                name="birthDay">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Phone </label>
+                                        <input type="text" name class="form-control" formControlName="phone" ngModel
+                                                name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Email </label>
+                                        <input type="text" name class="form-control" id="mailid" formControlName="mail"
+                                                ngModel name="mail">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Address </label>
+                                        <input type="text" name class="form-control" formControlName="address" ngModel
+                                                name="address">
+                                </div>
+
+                                <div class="form-group">
+                                        <input type="submit" name="" id="btn1" class="btn btn-info" (click)="onSubmit()"
+                                                routerLink="/list" value="Add" [disabled]="form.invalid">
+                                </div>
+
+                                <div class="form-group">
+                                        <input type="reset" name="" id="btn2" class="btn btn-info" routerLink='/'
+                                                value="Cancel">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class=""> </label>
+                                        <label class=""> </label>
+                                        <br />
+
+                                </div>
+                                <!-- Form Values: {{registrationForm.value} | json}<br/> -->
+                        </form>
+                </div>
+
+        </header>
+
+</body>

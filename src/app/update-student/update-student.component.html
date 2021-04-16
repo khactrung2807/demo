@@ -1,0 +1,78 @@
+<body>
+        <header>
+
+                <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6" id="Fform">
+                        <h3>Update Student</h3>
+                        <form [formGroup]="updateStudent" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                        <label class="label-control">StudentID </label>
+                                        <input type="text" class="form-control" id="stdid" placeholder="Mã studentid..."
+                                                formControlName="studentId" ngModel name="studentId"
+                                                ngModel={{StudentS.studentId}}>
+                                </div>
+                                <div class="form-group">
+                                        <label class="label-control">Class </label>
+                                        <input type="text" name class="form-control" id="cls" placeholder="Lớp học..."
+                                                formControlName="universityClass" ngModel={{StudentS.universityClass}}
+                                                name="universityClass">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">FirstName </label>
+                                        <input type="text" name class="form-control" id="Fname" placeholder="Họ..."
+                                                formControlName="firstName" ngModel={{StudentS.firstName}}
+                                                name="firstName">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">LastName </label>
+                                        <input type="text" name class="form-control" id="Lname" placeholder="Tên..."
+                                                formControlName="lastName" ngModel={{StudentS.lastName}}
+                                                name="lastName">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Birthday </label>
+                                        <input type="date" name class="form-control" formControlName="birthDay"
+                                                ngModel={{StudentS.birthDay}} name="birthDay">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Phone </label>
+                                        <input type="text" name class="form-control" id="phoneid"
+                                                formControlName="phone" ngModel={{StudentS.phone}} name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Email </label>
+                                        <input type="text" name class="form-control" id="mailid" formControlName="mail"
+                                                ngModel={{StudentS.mail}} name="mail">
+                                </div>
+
+                                <div class="form-group">
+                                        <label class="label-control">Address </label>
+                                        <input type="text" name class="form-control" formControlName="address"
+                                                ngModel={{StudentS.address}} name="address">
+                                </div>
+
+                                <div class="form-group">
+                                        <input type="submit" name="" id="btn1" class="btn btn-info" (click)="onSubmit()"
+                                                routerLink="/list" value="Update">
+                                </div>
+
+                                <div class="form-group">
+                                        <input type="button" name="" id="btn2" class="btn btn-info" routerLink='/list'
+                                                value="Cancel">
+                                </div>
+                                <div class="form-group">
+                                        <label class=""> </label>
+                                        <label class=""> </label>
+                                        <br />
+
+                                </div>
+                        </form>
+
+                </div>
+        </header>
+</body>
+<router-outlet></router-outlet>

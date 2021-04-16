@@ -1,25 +1,46 @@
 <body>
     <div class="container-fluid">
-    <h4>List Student</h4>
-    <button class="btn btn-white btn-animated">Add new student</button>
-    <div class="table-reponsive-sm">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th style="width: 10%">Student ID</th>
-                    <th style="width: 10%" >Full Name</th>
-                    <th style="width: 10%">Birthday</th>
+        <h4>List Student</h4>
 
-                    <th style="width: 10%">Class</th>
-                    <th style="width: 10%">Phone</th>
-                    <th style="width: 10%">Email</th>
-                    <th style="width: 10%">Actions</th>
-                </tr>
-            </thead>
+        <div class="table-reponsive-sm">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">STT</th>
+                        <th style="width: 8%">Student ID</th>
+                        <th style="width: 10%">Full Name</th>
+                        <th style="width: 10%">Birthday</th>
 
-        </table>
+                        <th style="width: 10%">Class</th>
+                        <th style="width: 10%">Phone</th>
+                        <th style="width: 15%">Email</th>
+                        <th style="width: 15%">Address</th>
+                        <th style="width: 15%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Student of listStudent(); let i = index">
+                        <td>{{ i+1}}</td>
+                        <td>{{ Student.studentId}}</td>
+                        <td>{{ Student.lastName + Student.firstName}}</td>
+                        <td>{{ Student.birthDay}}</td>
+                        <td>{{ Student.universityClass}}</td>
+                        <td>{{ Student.phone}}</td>
+                        <td>{{ Student.mail}}</td>
+                        <td>{{ Student.address}}</td>
+                        <td>
+                            <button type="button" class="btn1" (click)="onUpdateStudent(Student.studentId)"
+                                routerLink="/update" [state]="{id:Student.studentId}">Update</button> &nbsp;&nbsp;&nbsp;
+                            <!-- <a href="#">Delete</a> -->
+                            <button type="button" (click)="onDeleteStudent(Student.studentId)"
+                                class="btn ">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
 
-    </div>
+            </table>
+
+        </div>
     </div>
 </body>
-    
+<router-outlet></router-outlet>
